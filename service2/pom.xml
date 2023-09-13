@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.exist</groupId>
+    <artifactId>Exer6r0</artifactId>
+    <version>0.0.0</version>
+  </parent>
+  <artifactId>service2</artifactId>
+  <dependencies>
+		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+		<dependency>
+    		<groupId>commons-io</groupId>
+    		<artifactId>commons-io</artifactId>
+    		<version>2.13.0</version>
+  		</dependency>  
+  		<dependency>
+      		<groupId>com.exist</groupId>
+      		<artifactId>model2</artifactId>
+      		<version>0.0.0</version> 
+    	</dependency> 
+	  	<dependency>
+      		<groupId>com.exist</groupId>
+      		<artifactId>util2</artifactId>
+      		<version>0.0.0</version> 
+    	</dependency> 
+  </dependencies>
+  <build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.11.0</version>
+            <configuration>
+                <compilerArgs>
+                    <arg>--module-path</arg>
+					<arg>${project.parent.basedir}\service2_repo</arg>
+                </compilerArgs>
+            </configuration>
+        </plugin>
+    </plugins>
+  </build>
+</project>
